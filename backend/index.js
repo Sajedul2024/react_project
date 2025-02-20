@@ -14,7 +14,7 @@ app.get('/',async (req,res) => {
     return res.json({items : response})
 })
 
-app.listen(3000,() =>{
+app.listen(4000,() =>{
 
 console.log("app is running");
 
