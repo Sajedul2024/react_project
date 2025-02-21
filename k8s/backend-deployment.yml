@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: sajedul2024/reactproject:bc1
+        image: sajedul2024/reactproject:bk1
         ports:
         - containerPort: 4000
 ---
@@ -25,5 +25,5 @@ spec:
   selector:
     app: backend
   ports:
-  - port: 4000
+  - port: 80
     targetPort: 4000

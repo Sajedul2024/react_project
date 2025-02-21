@@ -1,6 +1,6 @@
-FROM node:16-alpine as builder
+FROM node:10-alpine as builder
 
-WORKDIR /app
+WORKDIR /app2
 
 COPY package.json .
 
@@ -13,7 +13,7 @@ RUN npm run build
 
 FROM nginx:alpine
 
-COPY --from=builder /app/build  /usr/share/nginx/html
+COPY --from=builder /app2/build  /usr/shared/nginx/html
 
 COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
 
